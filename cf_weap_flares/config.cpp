@@ -28,35 +28,35 @@ class CfgAmmo {
 	
 	class CF_F_40mm_White: F_40mm_White {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 2000000;
 	};
 	
 	class CF_F_40mm_Green: F_40mm_Green {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 2000000;
 	};
 	
 	class CF_F_40mm_Yellow: F_40mm_Yellow {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 2000000;
 	};
 	
 	class CF_F_40mm_Red: F_40mm_Red {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 2000000;
 	};
 	
 	class CF_F_40mm_Cir: F_40mm_Cir {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 2000000;
 	};
@@ -69,35 +69,35 @@ class CfgAmmo {
 	
 	
 	class CF_F_20mm_White: F_20mm_White {
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 1800000;
 	};
 	
 	class CF_F_20mm_Green: F_20mm_Green {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 1800000;
 	};
 	
 	class CF_F_20mm_Yellow: F_20mm_Yellow {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 1800000;
 	};
 	
 	class CF_F_20mm_Red: F_20mm_Red {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 1800000;
 	};
 	
 	class CF_F_20mm_Cir: F_20mm_Cir {
 		access = 1;
-		timeToLive = 60;
+		timeToLive = 50;
         brightness = 300;
         intensity  = 1800000;
 	};
