@@ -80,7 +80,7 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
+			maxRange = 450;
 			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
@@ -96,11 +96,11 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 250;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
@@ -166,7 +166,7 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
+			maxRange = 450;
 			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
@@ -182,11 +182,11 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 250;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
@@ -232,7 +232,7 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
+			maxRange = 450;
 			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
@@ -248,11 +248,11 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
 			aiRateOfFire = 0.5;
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 250;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
