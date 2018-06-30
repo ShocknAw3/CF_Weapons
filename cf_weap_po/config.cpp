@@ -20,6 +20,7 @@ class LMG_M200;
 class CfgWeapons {
 	
 	class srifle_EBR_F;
+	class MGun;
 	
 	class LOP_Weap_LeeEnfield : srifle_EBR_F {
 		aiDispersionCoefY = 5;
@@ -33,7 +34,7 @@ class CfgWeapons {
 			minRangeProbab = 0.9;
 			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 400;
+			maxRange = 450;
 			maxRangeProbab = 0.6;
 			aiRateOfFire = 2;
 			aiRateOfFireDispersion = 1;
@@ -94,5 +95,73 @@ class CfgWeapons {
 	class LOP_PKT : LMG_M200 {
 		aiDispersionCoefY = 9;
 		aiDispersionCoefX = 9;
+
+		modes[] = {"manual", "close", "short", "medium", "far"};
+		
+		class manual : MGun {
+			minRange = 0;
+			minRangeProbab = 0.01;
+			midRange = 20;
+			midRangeProbab = 0.01;
+			maxRange = 50;
+			maxRangeProbab = 0.01;
+		};
+		
+		class close : manual {
+			showToPlayer = false;
+			burst = 6;
+			burstRangeMax = 12;
+			aiRateOfFire = 1;	// delay between shots at given distance
+			aiRateOfFireDistance = 50;
+			aiRateOfFireDispersion = 1;
+			minRange = 0;
+			minRangeProbab = 0.7;
+			midRange = 20;
+			midRangeProbab = 0.7;
+			maxRange = 50;
+			maxRangeProbab = 0.7;
+		};
+		
+		class short : close {
+			burst = 5;
+			burstRangeMax = 10;
+			aiRateOfFire = 1;	// delay between shots at given distance
+			aiRateOfFireDistance = 300;
+			aiRateOfFireDispersion = 1;
+			minRange = 50;
+			minRangeProbab = 0.1;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 300;
+			maxRangeProbab = 0.6;
+		};
+		
+		class medium : close {
+			burst = 4;
+			burstRangeMax = 10;
+			aiRateOfFire = 1.5;	// delay between shots at given distance
+			aiRateOfFireDistance = 600;
+			aiRateOfFireDispersion = 1;
+			minRange = 300;
+			minRangeProbab = 0.4;
+			midRange = 450;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.6;
+		};
+		
+		class far : close {
+			burst = 4;
+			burstRangeMax = 8;
+			aiRateOfFire = 1.5;	// delay between shots at given distance
+			aiRateOfFireDistance = 1100;
+			aiRateOfFireDispersion = 1.5;
+			minRange = 600;
+			minRangeProbab = 0.4;
+			midRange = 850;
+			midRangeProbab = 0.7;
+			maxRange = 1100;
+			maxRangeProbab = 0.4;
+		};
 	};
 };
