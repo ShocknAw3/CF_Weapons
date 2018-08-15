@@ -133,6 +133,130 @@ class CfgWeapons {
 		};
 	};
 	
+	class rhs_weap_m76 : rhs_weap_m70_base {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 6;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+		
+		class single_close_optics1 : Single {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 250;
+			midRangeProbab = 0.8;
+			maxRange = 400;
+			maxRangeProbab = 0.4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 350;
+		};
+		
+		class single_medium_optics1 : single_close_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 250;
+			minRangeProbab = 0.6;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.2;
+			aiRateOfFire = 2.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 400;
+		};
+		
+		class single_far_optics1 : single_medium_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 250;
+			minRangeProbab = 0.4;
+			midRange = 500;
+			midRangeProbab = 0.7;
+			maxRange = 800;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 3;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 500;
+		};
+	};
+	
+	class rhs_weap_m21_base : rhs_weap_m70_base {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 6;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+		
+		class single_close_optics1 : Single {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 250;
+			midRangeProbab = 0.8;
+			maxRange = 400;
+			maxRangeProbab = 0.4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 350;
+		};
+		
+		class single_medium_optics1 : single_close_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 250;
+			minRangeProbab = 0.6;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.2;
+			aiRateOfFire = 2.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 400;
+		};
+		
+		class single_far_optics1 : single_medium_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 250;
+			minRangeProbab = 0.4;
+			midRange = 500;
+			midRangeProbab = 0.7;
+			maxRange = 800;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 3;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 500;
+		};
+	};
+	
 	class rhs_weap_ag36_base : UGL_F {
 		aiDispersionCoefX = 25;
 		aiDispersionCoefY = 25;

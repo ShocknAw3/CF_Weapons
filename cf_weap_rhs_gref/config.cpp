@@ -180,6 +180,78 @@ class CfgWeapons {
 			aiRateOfFireDistance = 800;
 		};
 	};
+	
+	class rhs_weap_m38 : rhs_weap_m38_Base_F {};
+	
+	class rhs_weap_m38_rail : rhs_weap_m38 {};
+	
+	class rhs_weap_mosin_sbr : rhs_weap_m38_rail {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 5;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+		
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+		
+		class far_optic1 : Single {
+			aiDispersionCoefY = 0.6;
+			aiDispersionCoefX = 0.6;
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 250;
+			minRangeProbab = 0.6;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.2;
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 400;
+		};
+		
+		class medium_optic2 : Single {
+			aiDispersionCoefY = 0.6;
+			aiDispersionCoefX = 0.6;
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 250;
+			minRangeProbab = 0.4;
+			midRange = 500;
+			midRangeProbab = 0.7;
+			maxRange = 800;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 5;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 500;
+		};
+		
+		class far_optic2 : far_optic1 {
+			aiDispersionCoefY = 0.5;
+			aiDispersionCoefX = 0.5;
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 500;
+			minRangeProbab = 0.3;
+			midRange = 800;
+			midRangeProbab = 0.7;
+			maxRange = 1000;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 5;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 800;
+		};
+	};
 
 	class rhs_weap_m70_base : Rifle_Base_F {
 		aiDispersionCoefY = 5;
@@ -309,7 +381,135 @@ class CfgWeapons {
 		};
 	};
 	
+	class rhs_weap_m21_base : rhs_weap_m70_base {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 6;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+		
+		class single_close_optics1 : Single {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 250;
+			midRangeProbab = 0.8;
+			maxRange = 400;
+			maxRangeProbab = 0.4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 350;
+		};
+		
+		class single_medium_optics1 : single_close_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 250;
+			minRangeProbab = 0.6;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.2;
+			aiRateOfFire = 2.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 400;
+		};
+		
+		class single_far_optics1 : single_medium_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 250;
+			minRangeProbab = 0.4;
+			midRange = 500;
+			midRangeProbab = 0.7;
+			maxRange = 800;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 3;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 500;
+		};
+	};
+	
 	class rhs_weap_savz58_base : Rifle_Base_F {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 6;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+		modes[] = {"Single", "single_medium_optics1", "single_medium_optics2", "FullAuto", "fullauto_medium"};
+		
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+	
+		class FullAuto : Mode_FullAuto {};
+		
+		class single_medium_optics1 : Single {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+		
+		class single_medium_optics2 : single_medium_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 500;
+			maxRangeProbab = 0.7;
+			aiRateOfFire = 0.75;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+		
+		class fullauto_medium : FullAuto {
+			showToPlayer = false;
+			burst = 2;
+			burstRangeMax = 6;
+			minRange = 1;
+			minRangeProbab = 0.9;
+			midRange = 150;
+			midRangeProbab = 0.8;
+			maxRange = 250;
+			maxRangeProbab = 0.45;
+			aiRateOfFire = 1;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 150;
+		};
+	};
+	
+	class rhs_weap_vhs2_base : Rifle_Base_F {
 		aiDispersionCoefY = 5;
 		aiDispersionCoefX = 6;
 		opticsZoomMin = 0.25;
@@ -445,6 +645,72 @@ class CfgWeapons {
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
+	};
+	
+	class rhs_weap_MP44_base : Rifle_Base_F {
+		aiDispersionCoefY = 5;
+		aiDispersionCoefX = 6;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+		modes[] = {"Single", "single_medium_optics1", "single_medium_optics2", "FullAuto", "fullauto_medium"};
+		
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+	
+		class FullAuto : Mode_FullAuto {};
+		
+		class single_medium_optics1 : Single {
+			showToPlayer = false;
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 450;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 250;
+		};
+		
+		class single_medium_optics2 : single_medium_optics1 {
+			showToPlayer = false;
+			requiredOpticType = 2;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 250;
+			midRangeProbab = 0.7;
+			maxRange = 500;
+			maxRangeProbab = 0.7;
+			aiRateOfFire = 0.75;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+		
+		class fullauto_medium : FullAuto {
+			showToPlayer = false;
+			burst = 2;
+			burstRangeMax = 6;
+			minRange = 1;
+			minRangeProbab = 0.9;
+			midRange = 150;
+			midRangeProbab = 0.8;
+			maxRange = 250;
+			maxRangeProbab = 0.45;
+			aiRateOfFire = 1;
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 150;
+		};
 	};
 	
 	class rhs_weap_pya; // External class reference
