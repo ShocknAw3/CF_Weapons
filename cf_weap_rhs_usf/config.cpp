@@ -869,19 +869,6 @@ class CfgWeapons {
 		};
 	};
 	
-	class rhsusf_weap_glock17g4 : hgun_P07_F {
-		class Single : Mode_SemiAuto {
-			minRange = 5;
-			minRangeProbab = 0.3;
-			midRange = 25;
-			midRangeProbab = 0.6;
-			maxRange = 50;
-			maxRangeProbab = 0.1;
-			aiRateOfFire = 2;
-			aiRateOfFireDistance = 25;
-		};
-	};
-	
 	class rhsusf_acc_compm4 : ItemCore {
 		class ItemInfo : InventoryOpticsItem_Base_F {
 			class OpticsModes {
