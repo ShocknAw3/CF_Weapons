@@ -1,33 +1,26 @@
-class CfgPatches
-{
-	class CF_Weapons_PO
-	{
-		// Use meta information from specified addon. Used to avoid repeated declarations.
+class CfgPatches {
+	class CF_Weapons_PO {
 		addonRootClass = "CF_Weapons";
- 
 		requiredVersion = 1.62;
-		requiredAddons[] = {"po_factions_me", "po_vehicles"};
+		requiredAddons[] = {"po_factions_me", "po_vehicles", "asr_ai3_popfor_c"};
 		units[] = {};
 		weapons[] = {};
 	};
 };
-
-// Small Arms - po_factions_me
-
-class Mode_SemiAuto;
-class LMG_M200;
+class Mode_SemiAuto;	// External class reference
+class LMG_M200;	// External class reference
 
 class CfgWeapons {
-	
-	class srifle_EBR_F;
-	class MGun;
+	class srifle_EBR_F;	// External class reference
+	class MGun;	// External class reference
 	
 	class LOP_Weap_LeeEnfield : srifle_EBR_F {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 5;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 4;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
+		modes[] = {"Single", "medium_optic2", "far_optic1", "far_optic2"};
 		
 		class Single : Mode_SemiAuto {
 			minRange = 2;
@@ -36,7 +29,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 450;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 2;
+			aiRateOfFire = 2;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 300;
 		};
@@ -44,7 +37,7 @@ class CfgWeapons {
 		class far_optic1 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -52,7 +45,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 600;
 			maxRangeProbab = 0.2;
-			aiRateOfFire = 4;
+			aiRateOfFire = 4;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 400;
 		};
@@ -60,7 +53,7 @@ class CfgWeapons {
 		class medium_optic2 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -68,7 +61,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 800;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 5;
+			aiRateOfFire = 5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 2;
 			aiRateOfFireDistance = 500;
 		};
@@ -76,7 +69,7 @@ class CfgWeapons {
 		class far_optic2 : far_optic1 {
 			aiDispersionCoefY = 0.5;
 			aiDispersionCoefX = 0.5;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 500;
 			minRangeProbab = 0.3;
@@ -84,18 +77,15 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 1000;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 5;
+			aiRateOfFire = 5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 2;
 			aiRateOfFireDistance = 800;
 		};
 	};
 	
-// Heavy Weapons - po_vehicles
-
 	class LOP_PKT : LMG_M200 {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
-
+		aiDispersionCoefY = 7;
+		aiDispersionCoefX = 7;
 		modes[] = {"manual", "close", "short", "medium", "far"};
 		
 		class manual : MGun {
@@ -108,7 +98,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
