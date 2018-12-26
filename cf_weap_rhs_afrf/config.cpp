@@ -75,7 +75,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -89,7 +89,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -103,7 +103,7 @@ class CfgWeapons {
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -141,7 +141,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -155,7 +155,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -169,7 +169,7 @@ class CfgWeapons {
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -207,7 +207,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -221,7 +221,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -235,7 +235,7 @@ class CfgWeapons {
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -273,7 +273,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -287,7 +287,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -301,7 +301,7 @@ class CfgWeapons {
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -340,7 +340,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -354,7 +354,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -412,7 +412,7 @@ class CfgWeapons {
 		class FullAuto : FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -426,7 +426,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
@@ -440,7 +440,7 @@ class CfgWeapons {
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -475,7 +475,7 @@ class CfgWeapons {
 		};
 		
 		class single_close_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.9;
@@ -489,7 +489,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics1 : single_close_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -503,7 +503,7 @@ class CfgWeapons {
 		};
 		
 		class single_far_optics1 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -532,7 +532,7 @@ class CfgWeapons {
 		};
 		
 		class single_close_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.9;
@@ -546,7 +546,7 @@ class CfgWeapons {
 		};
 		
 		class single_medium_optics1 : single_close_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -560,7 +560,7 @@ class CfgWeapons {
 		};
 		
 		class single_far_optics1 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -596,7 +596,7 @@ class CfgWeapons {
 		class far_optic1 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -612,7 +612,7 @@ class CfgWeapons {
 		class medium_optic2 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -628,7 +628,7 @@ class CfgWeapons {
 		class far_optic2 : far_optic1 {
 			aiDispersionCoefY = 0.5;
 			aiDispersionCoefX = 0.5;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 500;
 			minRangeProbab = 0.3;
@@ -653,7 +653,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class close : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -668,7 +668,7 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
@@ -683,7 +683,7 @@ class CfgWeapons {
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
 			aiRateOfFireDispersion = 2;
@@ -698,7 +698,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -714,7 +714,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -745,7 +745,7 @@ class CfgWeapons {
 		class manual : FullAuto {};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -760,7 +760,7 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
@@ -775,7 +775,7 @@ class CfgWeapons {
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
 			aiRateOfFireDispersion = 2;
@@ -790,7 +790,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -806,7 +806,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -833,7 +833,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class close : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -848,7 +848,7 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
@@ -863,7 +863,7 @@ class CfgWeapons {
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = 0;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
 			aiRateOfFireDispersion = 2;
@@ -878,7 +878,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -894,7 +894,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -955,7 +955,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1027,7 +1027,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1098,7 +1098,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1174,7 +1174,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1245,7 +1245,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 3;
 			burstRangeMax = 6;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1316,7 +1316,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance

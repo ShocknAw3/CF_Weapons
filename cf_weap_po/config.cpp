@@ -44,7 +44,7 @@ class CfgWeapons {
 		class far_optic1 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -60,7 +60,7 @@ class CfgWeapons {
 		class medium_optic2 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -76,7 +76,7 @@ class CfgWeapons {
 		class far_optic2 : far_optic1 {
 			aiDispersionCoefY = 0.5;
 			aiDispersionCoefX = 0.5;
-			showToPlayer = false;
+			showToPlayer = 0;
 			requiredOpticType = 2;
 			minRange = 500;
 			minRangeProbab = 0.3;
@@ -108,7 +108,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = 0;
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
