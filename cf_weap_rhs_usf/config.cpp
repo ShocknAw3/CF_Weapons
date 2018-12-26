@@ -37,6 +37,7 @@ class CfgWeapons {
 	class MGunCore;
 	class M134_minigun : MGunCore {};
 	class LMG_RCWS;
+	class optic_Holosight;
 	
 // Small Arms
 	
@@ -547,7 +548,7 @@ class CfgWeapons {
 		
 		class manual : Mode_FullAuto {};
 		
-		class close : FullAuto {
+		class close : manual {
 			showToPlayer = false;
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
@@ -577,7 +578,7 @@ class CfgWeapons {
 			maxRangeProbab = 0.4;
 		};
 		
-		class medium : FullAuto {
+		class medium : close {
 			showToPlayer = false;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -592,7 +593,7 @@ class CfgWeapons {
 			maxRangeProbab = 0.6;
 		};
 		
-		class far_optic1 : medium {
+		class far_optic1 : close {
 			showToPlayer = false;
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
@@ -873,11 +874,52 @@ class CfgWeapons {
 		class ItemInfo : InventoryOpticsItem_Base_F {
 			class OpticsModes {
 				class ACO {
+					cameraDir = "";
+					distanceZoomMin = 300;
+					distanceZoomMax = 300;
+					memoryPointCamera = "opticview";
+					opticsDisablePeripheralVision = 0;
+					opticsFlare = 0;
+					opticsID = 1;
+					opticsPPEffects[] = {"OpticsBlur1"};
 					opticsZoomMin = 0.25;
 					opticsZoomMax = 1.25;
 					opticsZoomInit = 0.75;
+					useModelOptics = 0;
+					visionMode[] = {};
+				};
+			};
+		};
+	};
+	
+	class rhsusf_acc_eotech_xps3 : optic_Holosight {
+		class ItemInfo : InventoryOpticsItem_Base_F {
+			mass = 6;
+			modelOptics = "\A3\Weapons_F\empty";
+				mountAction = "MountOptic";
+				muzzleEnd = "konec hlavne";
+				muzzlePos = "usti hlavne";
+			optics = 1;
+				scope = 0;
+				type = 201;
+				unmountAction = "DismountOptic";
+			class OpticsModes {
+				class ACO {
+					cameraDir = "";
 					distanceZoomMin = 300;
 					distanceZoomMax = 300;
+					memoryPointCamera = "eye";
+					opticsDisablePeripherialVision = 0;
+					opticsFlare = 0;
+					opticsID = 1;
+					opticsPPEffects[] = {"OpticsBlur1"};
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					useModelOptics = 0;
+					visionMode[] = {};
+					
+					
 				};
 			};
 		};
