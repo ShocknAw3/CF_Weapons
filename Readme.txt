@@ -1,4 +1,4 @@
-v1.10
+v1.11
 
 cf_weap_main:
 - N/A
