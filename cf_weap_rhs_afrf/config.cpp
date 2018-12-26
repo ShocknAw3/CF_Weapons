@@ -1,36 +1,29 @@
-class CfgPatches
-{
-	class CF_Weapons_RHS_AFRF
-	{
-		// Use meta information from specified addon. Used to avoid repeated declarations.
+class CfgPatches {
+	class CF_Weapons_RHS_AFRF {
 		addonRootClass = "CF_Weapons";
- 
 		requiredVersion = 1.62;
-		requiredAddons[] = {"rhs_c_weapons", "rhs_c_heavyweapons"};
+		requiredAddons[] = {"rhs_c_weapons", "rhs_c_heavyweapons", "asr_ai3_rhs_c"};
 		units[] = {};
 		weapons[] = {};
 	};
 };
-
-class Mode_Burst;
-class Mode_SemiAuto;
-class Mode_FullAuto;
-class ItemCore;
+class Mode_Burst;	// External class reference
+class Mode_SemiAuto;	// External class reference
+class Mode_FullAuto;	// External class reference
+class ItemCore;	// External class reference
 
 class CfgWeapons {
-	class Rifle_Base_F;
-	class UGL_F;
-	class rhs_weap_ak74m;
-	class Rifle_Long_Base_F;
-	class Launcher_Base_F;
-	class InventoryOpticsItem_Base_F;
-	class MGun;
-	class LMG_RCWS;
-	class GMG_20mm;
-	class rhs_acc_sniper_base;
-	class GMG_F;
-	
-// Small Arms
+	class Rifle_Base_F;	// External class reference
+	class UGL_F;	// External class reference
+	class rhs_weap_ak74m;	// External class reference
+	class Rifle_Long_Base_F;	// External class reference
+	class Launcher_Base_F;	// External class reference
+	class InventoryOpticsItem_Base_F;	// External class reference
+	class MGun;	// External class reference
+	class LMG_RCWS;	// External class reference
+	class GMG_20mm;	// External class reference
+	class rhs_acc_sniper_base;	// External class reference
+	class GMG_F;	// External class reference
 	
 	class GP25_Base : UGL_F {
 		aiDispersionCoefX = 25;
@@ -53,8 +46,8 @@ class CfgWeapons {
 	};
 	
 	class rhs_weap_ak74m_Base_F : Rifle_Base_F {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -63,47 +56,47 @@ class CfgWeapons {
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
-	
+		
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -112,15 +105,15 @@ class CfgWeapons {
 			midRangeProbab = 0.8;
 			maxRange = 250;
 			maxRangeProbab = 0.45;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
 	};
-
+	
 	class rhs_weap_akm : rhs_weap_ak74m {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -129,47 +122,47 @@ class CfgWeapons {
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
-	
+		
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -178,15 +171,15 @@ class CfgWeapons {
 			midRangeProbab = 0.8;
 			maxRange = 250;
 			maxRangeProbab = 0.45;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
 	};
 	
 	class rhs_weap_ak103_base : rhs_weap_akm {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -195,47 +188,47 @@ class CfgWeapons {
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
-	
+		
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -244,15 +237,15 @@ class CfgWeapons {
 			midRangeProbab = 0.8;
 			maxRange = 250;
 			maxRangeProbab = 0.45;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
 	};
 	
 	class rhs_weap_ak103_1 : rhs_weap_ak103_base {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -261,47 +254,47 @@ class CfgWeapons {
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
-	
+		
 		class FullAuto : Mode_FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -310,18 +303,15 @@ class CfgWeapons {
 			midRangeProbab = 0.8;
 			maxRange = 250;
 			maxRangeProbab = 0.45;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
 	};
-		
-	
-	// BURST INSTEAD OF FULLAUTO
 	
 	class rhs_weap_ak103_2 : rhs_weap_ak103_base {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -330,41 +320,41 @@ class CfgWeapons {
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class Burst : Mode_Burst {
@@ -374,24 +364,21 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 250;
 			maxRangeProbab = 0.5;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
-	};	
-	
-	class rhs_weap_ak74;
+	};
+	class rhs_weap_ak74;	// External class reference
 	
 	class rhs_weap_aks74 : rhs_weap_ak74 {
-		class Single;
-		class FullAuto;
+		class Single;	// External class reference
+		class FullAuto;	// External class reference
 	};
 	
-	// INHERITANCE IS DIFFERENT FOR THE AKS-74U: Single and FullAuto!
-	
 	class rhs_weap_aks74u : rhs_weap_aks74 {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -400,47 +387,47 @@ class CfgWeapons {
 		class Single : Single {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
-	
+		
 		class FullAuto : FullAuto {};
 		
 		class single_medium_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 550;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 350;
 		};
 		
 		class single_medium_optics2 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 500;
+			maxRange = 600;
 			maxRangeProbab = 0.7;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.75;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 		};
 		
 		class fullauto_medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 2;
 			burstRangeMax = 6;
 			minRange = 1;
@@ -449,133 +436,195 @@ class CfgWeapons {
 			midRangeProbab = 0.8;
 			maxRange = 250;
 			maxRangeProbab = 0.45;
-			aiRateOfFire = 1;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 150;
 		};
 	};
 	
-	class rhs_weap_svd : rhs_weap_ak74m {
-		aiDispersionCoefY = 5;
-		aiDispersionCoefX = 6;
+	class rhs_weap_asval : rhs_weap_ak74m {
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
-
+		modes[] = {"Single", "single_close_optics1", "single_medium_optics1", "single_far_optics1"};
+		
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 200;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
+			aiRateOfFireDistance = 200;
 		};
 		
 		class single_close_optics1 : Single {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 2;
 			minRangeProbab = 0.9;
-			midRange = 250;
+			midRange = 300;
 			midRangeProbab = 0.8;
 			maxRange = 400;
 			maxRangeProbab = 0.4;
-			aiRateOfFire = 2;
+			aiRateOfFire = 2;	// delay between shots at given distance
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+		
+		class single_medium_optics1 : single_close_optics1 {
+			showToPlayer = "false";
+			requiredOpticType = 1;
+			minRange = 100;
+			minRangeProbab = 0.6;
+			midRange = 300;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.2;
+			aiRateOfFire = 2;	// delay between shots at given distance
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+		
+		class single_far_optics1 : single_medium_optics1 {
+			showToPlayer = "false";
+			requiredOpticType = 2;
+			minRange = 200;
+			minRangeProbab = 0.4;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 500;
+			maxRangeProbab = 0.3;
+			aiRateOfFire = 3;	// delay between shots at given distance
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 300;
+		};
+	};
+	
+	class rhs_weap_svd : rhs_weap_ak74m {
+		aiDispersionCoefY = 4;
+		aiDispersionCoefX = 5;
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+		
+		class Single : Mode_SemiAuto {
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 350;
+			midRangeProbab = 0.7;
+			maxRange = 500;
+			maxRangeProbab = 0.6;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 350;
 		};
 		
+		class single_close_optics1 : Single {
+			showToPlayer = "false";
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 350;
+			midRangeProbab = 0.8;
+			maxRange = 500;
+			maxRangeProbab = 0.4;
+			aiRateOfFire = 2;	// delay between shots at given distance
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 450;
+		};
+		
 		class single_medium_optics1 : single_close_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
 			midRange = 400;
 			midRangeProbab = 0.7;
-			maxRange = 600;
+			maxRange = 800;
 			maxRangeProbab = 0.2;
-			aiRateOfFire = 2.5;
+			aiRateOfFire = 2.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 400;
 		};
 		
 		class single_far_optics1 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
-			midRange = 500;
+			midRange = 1000;
 			midRangeProbab = 0.7;
-			maxRange = 800;
+			maxRange = 1300;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 3;
+			aiRateOfFire = 3;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 500;
+			aiRateOfFireDistance = 1000;
 		};
 	};
 	
 	class rhs_weap_svdp : rhs_weap_svd {
-		
 		class Single : Mode_SemiAuto {
 			minRange = 2;
 			minRangeProbab = 0.3;
-			midRange = 250;
+			midRange = 350;
 			midRangeProbab = 0.7;
-			maxRange = 450;
+			maxRange = 500;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
-			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 250;
-		};
-		
-		class single_close_optics1 : Single {
-			showToPlayer = false;
-			requiredOpticType = 1;
-			minRange = 2;
-			minRangeProbab = 0.9;
-			midRange = 250;
-			midRangeProbab = 0.8;
-			maxRange = 400;
-			maxRangeProbab = 0.4;
-			aiRateOfFire = 2;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 350;
 		};
 		
+		class single_close_optics1 : Single {
+			showToPlayer = "false";
+			requiredOpticType = 1;
+			minRange = 2;
+			minRangeProbab = 0.9;
+			midRange = 350;
+			midRangeProbab = 0.8;
+			maxRange = 500;
+			maxRangeProbab = 0.4;
+			aiRateOfFire = 2;	// delay between shots at given distance
+			aiRateOfFireDispersion = 1;
+			aiRateOfFireDistance = 450;
+		};
+		
 		class single_medium_optics1 : single_close_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
 			midRange = 400;
 			midRangeProbab = 0.7;
-			maxRange = 600;
+			maxRange = 800;
 			maxRangeProbab = 0.2;
-			aiRateOfFire = 2.5;
+			aiRateOfFire = 2.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 400;
 		};
 		
 		class single_far_optics1 : single_medium_optics1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
-			midRange = 500;
+			midRange = 1000;
 			midRangeProbab = 0.7;
-			maxRange = 800;
+			maxRange = 1300;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 3;
+			aiRateOfFire = 3;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
-			aiRateOfFireDistance = 500;
+			aiRateOfFireDistance = 1000;
 		};
 	};
 	
 	class rhs_weap_orsis_Base_F : Rifle_Base_F {
-		aiDispersionCoefY = 5;
+		aiDispersionCoefY = 4;
 		aiDispersionCoefX = 5;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
@@ -588,7 +637,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 450;
 			maxRangeProbab = 0.6;
-			aiRateOfFire = 0.5;
+			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 250;
 		};
@@ -596,7 +645,7 @@ class CfgWeapons {
 		class far_optic1 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			minRange = 250;
 			minRangeProbab = 0.6;
@@ -604,7 +653,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 600;
 			maxRangeProbab = 0.2;
-			aiRateOfFire = 4;
+			aiRateOfFire = 4;	// delay between shots at given distance
 			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 400;
 		};
@@ -612,7 +661,7 @@ class CfgWeapons {
 		class medium_optic2 : Single {
 			aiDispersionCoefY = 0.6;
 			aiDispersionCoefX = 0.6;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 250;
 			minRangeProbab = 0.4;
@@ -620,7 +669,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 800;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 5;
+			aiRateOfFire = 5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 2;
 			aiRateOfFireDistance = 500;
 		};
@@ -628,7 +677,7 @@ class CfgWeapons {
 		class far_optic2 : far_optic1 {
 			aiDispersionCoefY = 0.5;
 			aiDispersionCoefX = 0.5;
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			minRange = 500;
 			minRangeProbab = 0.3;
@@ -636,7 +685,7 @@ class CfgWeapons {
 			midRangeProbab = 0.7;
 			maxRange = 1000;
 			maxRangeProbab = 0.3;
-			aiRateOfFire = 5;
+			aiRateOfFire = 5;	// delay between shots at given distance
 			aiRateOfFireDispersion = 2;
 			aiRateOfFireDistance = 800;
 		};
@@ -644,8 +693,8 @@ class CfgWeapons {
 	
 	class rhs_pkp_base : Rifle_Long_Base_F {
 		modes[] = {"FullAuto", "close", "short", "medium", "far_optic1", "far_optic2"};
-		aiDispersionCoefY = 10;
-		aiDispersionCoefX = 10;
+		aiDispersionCoefY = 9;
+		aiDispersionCoefX = 9;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -653,7 +702,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class close : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -668,7 +717,7 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
@@ -676,14 +725,14 @@ class CfgWeapons {
 			burstRangeMax = 8;
 			minRange = 50;
 			minRangeProbab = 0.3;
-			midRange = 200;
+			midRange = 300;
 			midRangeProbab = 0.8;
-			maxRange = 300;
+			maxRange = 400;
 			maxRangeProbab = 0.4;
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
 			aiRateOfFireDispersion = 2;
@@ -698,7 +747,7 @@ class CfgWeapons {
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -707,14 +756,14 @@ class CfgWeapons {
 			burstRangeMax = 6;
 			minRange = 300;
 			minRangeProbab = 0.3;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.8;
-			maxRange = 650;
+			maxRange = 750;
 			maxRangeProbab = 0.7;
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -725,19 +774,17 @@ class CfgWeapons {
 			minRangeProbab = 0.3;
 			midRange = 550;
 			midRangeProbab = 0.6;
-			maxRange = 700;
+			maxRange = 800;
 			maxRangeProbab = 0.7;
 		};
 	};
 	
 	class rhs_weap_pkp : rhs_pkp_base {};
 	
-	// DIFFERENT FIRING MODE: MANUAL, NOT FULLAUTO
-	
 	class rhs_weap_pkm : rhs_weap_pkp {
 		modes[] = {"FullAuto", "close", "short", "medium", "far_optic1", "far_optic2"};
-		aiDispersionCoefY = 10;
-		aiDispersionCoefX = 10;
+		aiDispersionCoefY = 9;
+		aiDispersionCoefX = 9;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -745,7 +792,7 @@ class CfgWeapons {
 		class manual : FullAuto {};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -760,7 +807,7 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
@@ -768,29 +815,29 @@ class CfgWeapons {
 			burstRangeMax = 8;
 			minRange = 50;
 			minRangeProbab = 0.3;
-			midRange = 200;
+			midRange = 300;
 			midRangeProbab = 0.8;
-			maxRange = 300;
+			maxRange = 400;
 			maxRangeProbab = 0.4;
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 500;
+			aiRateOfFireDistance = 600;
 			aiRateOfFireDispersion = 2;
 			burst = 3;
 			burstRangeMax = 6;
 			minRange = 300;
 			minRangeProbab = 0.7;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.6;
-			maxRange = 600;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -799,14 +846,14 @@ class CfgWeapons {
 			burstRangeMax = 6;
 			minRange = 300;
 			minRangeProbab = 0.3;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.8;
-			maxRange = 650;
+			maxRange = 750;
 			maxRangeProbab = 0.7;
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -815,17 +862,17 @@ class CfgWeapons {
 			burstRangeMax = 5;
 			minRange = 400;
 			minRangeProbab = 0.3;
-			midRange = 550;
+			midRange = 650;
 			midRangeProbab = 0.6;
-			maxRange = 700;
+			maxRange = 800;
 			maxRangeProbab = 0.7;
 		};
 	};
 	
 	class rhs_weap_rpk74m : rhs_weap_pkp {
 		modes[] = {"FullAuto", "close", "short", "medium", "far_optic1", "far_optic2"};
-		aiDispersionCoefY = 10;
-		aiDispersionCoefX = 10;
+		aiDispersionCoefY = 9;
+		aiDispersionCoefX = 9;
 		opticsZoomMin = 0.25;
 		opticsZoomMax = 1.25;
 		opticsZoomInit = 0.75;
@@ -833,7 +880,7 @@ class CfgWeapons {
 		class FullAuto : Mode_FullAuto {};
 		
 		class close : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 2;
@@ -848,37 +895,37 @@ class CfgWeapons {
 		};
 		
 		class short : close {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 2;
 			burst = 3;
 			burstRangeMax = 8;
 			minRange = 50;
 			minRangeProbab = 0.3;
-			midRange = 200;
+			midRange = 300;
 			midRangeProbab = 0.8;
-			maxRange = 300;
+			maxRange = 400;
 			maxRangeProbab = 0.4;
 		};
 		
 		class medium : FullAuto {
-			showToPlayer = false;
+			showToPlayer = "false";
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 500;
+			aiRateOfFireDistance = 600;
 			aiRateOfFireDispersion = 2;
 			burst = 3;
 			burstRangeMax = 6;
 			minRange = 300;
 			minRangeProbab = 0.7;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.6;
-			maxRange = 600;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
 		class far_optic1 : medium {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 1;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 500;
@@ -887,14 +934,14 @@ class CfgWeapons {
 			burstRangeMax = 6;
 			minRange = 300;
 			minRangeProbab = 0.3;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.8;
-			maxRange = 650;
+			maxRange = 750;
 			maxRangeProbab = 0.7;
 		};
 		
 		class far_optic2 : far_optic1 {
-			showToPlayer = false;
+			showToPlayer = "false";
 			requiredOpticType = 2;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
@@ -903,23 +950,23 @@ class CfgWeapons {
 			burstRangeMax = 5;
 			minRange = 400;
 			minRangeProbab = 0.3;
-			midRange = 550;
+			midRange = 650;
 			midRangeProbab = 0.6;
-			maxRange = 700;
+			maxRange = 800;
 			maxRangeProbab = 0.7;
 		};
 	};
 	
 	class rhs_weap_rpg26 : Launcher_Base_F {
-		aiDispersionCoefY = 15;
-		aiDispersionCoefX = 15;
+		aiDispersionCoefY = 13;
+		aiDispersionCoefX = 13;
 	};
 	
 	class rhs_weap_rpg7 : Launcher_Base_F {
-		aiDispersionCoefY = 15;
-		aiDispersionCoefX = 15;
+		aiDispersionCoefY = 13;
+		aiDispersionCoefX = 13;
 	};
-		
+	
 	class rhs_acc_pkas : rhs_acc_sniper_base {
 		class ItemInfo : InventoryOpticsItem_Base_F {
 			class OpticsModes {
@@ -934,15 +981,14 @@ class CfgWeapons {
 		};
 	};
 	
-// Heavy Weapons
 	class PKT : MGun {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 	};
 	
 	class rhs_weap_pkt : PKT {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 		modes[] = {"manual", "close", "short", "medium", "far"};
 		
 		class manual : MGun {
@@ -955,31 +1001,31 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
 			aiRateOfFireDispersion = 1;
 			minRange = 0;
-			minRangeProbab = 0.7;
+			minRangeProbab = 0.8;
 			midRange = 20;
-			midRangeProbab = 0.7;
+			midRangeProbab = 0.8;
 			maxRange = 50;
-			maxRangeProbab = 0.7;
+			maxRangeProbab = 0.8;
 		};
 		
 		class short : close {
 			burst = 5;
 			burstRangeMax = 10;
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 1;
 			minRange = 50;
-			minRangeProbab = 0.1;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 300;
+			minRangeProbab = 0.5;
+			midRange = 300;
+			midRangeProbab = 0.8;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -987,13 +1033,13 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 10;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 600;
+			aiRateOfFireDistance = 700;
 			aiRateOfFireDispersion = 1;
 			minRange = 300;
 			minRangeProbab = 0.4;
-			midRange = 450;
-			midRangeProbab = 0.7;
-			maxRange = 600;
+			midRange = 550;
+			midRangeProbab = 0.8;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1001,20 +1047,20 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 8;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 1100;
+			aiRateOfFireDistance = 1500;
 			aiRateOfFireDispersion = 1.5;
-			minRange = 600;
+			minRange = 700;
 			minRangeProbab = 0.4;
-			midRange = 850;
-			midRangeProbab = 0.7;
-			maxRange = 1100;
-			maxRangeProbab = 0.4;
+			midRange = 1100;
+			midRangeProbab = 0.8;
+			maxRange = 1500;
+			maxRangeProbab = 0.5;
 		};
 	};
 	
 	class rhs_weap_DSHKM : LMG_RCWS {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 		modes[] = {"manual", "close", "short", "medium", "far"};
 		
 		class manual : MGun {
@@ -1027,7 +1073,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1045,13 +1091,13 @@ class CfgWeapons {
 			burst = 5;
 			burstRangeMax = 10;
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 1;
 			minRange = 50;
 			minRangeProbab = 0.1;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 300;
+			midRange = 300;
+			midRangeProbab = 0.8;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1059,13 +1105,13 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 10;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 600;
+			aiRateOfFireDistance = 700;
 			aiRateOfFireDispersion = 1;
 			minRange = 300;
 			minRangeProbab = 0.4;
-			midRange = 450;
-			midRangeProbab = 0.7;
-			maxRange = 600;
+			midRange = 550;
+			midRangeProbab = 0.8;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1077,16 +1123,16 @@ class CfgWeapons {
 			aiRateOfFireDispersion = 1.5;
 			minRange = 600;
 			minRangeProbab = 0.4;
-			midRange = 850;
-			midRangeProbab = 0.7;
-			maxRange = 1100;
-			maxRangeProbab = 0.4;
+			midRange = 1100;
+			midRangeProbab = 0.8;
+			maxRange = 1500;
+			maxRangeProbab = 0.6;
 		};
 	};
 	
 	class rhs_weap_nsvt : rhs_weap_DSHKM {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 		
 		class manual : MGun {
 			minRange = 0;
@@ -1098,7 +1144,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1116,13 +1162,13 @@ class CfgWeapons {
 			burst = 5;
 			burstRangeMax = 10;
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 1;
 			minRange = 50;
 			minRangeProbab = 0.1;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 300;
+			midRange = 300;
+			midRangeProbab = 0.8;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1130,13 +1176,13 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 10;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 600;
+			aiRateOfFireDistance = 700;
 			aiRateOfFireDispersion = 1;
 			minRange = 300;
 			minRangeProbab = 0.4;
-			midRange = 450;
+			midRange = 550;
 			midRangeProbab = 0.7;
-			maxRange = 600;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1148,21 +1194,21 @@ class CfgWeapons {
 			aiRateOfFireDispersion = 1.5;
 			minRange = 600;
 			minRangeProbab = 0.4;
-			midRange = 850;
-			midRangeProbab = 0.7;
-			maxRange = 1100;
-			maxRangeProbab = 0.4;
+			midRange = 1100;
+			midRangeProbab = 0.8;
+			maxRange = 1500;
+			maxRangeProbab = 0.6;
 		};
 	};
 	
 	class KPVT : MGun {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 	};
 	
 	class rhs_weap_kpvt : KPVT {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 		
 		class manual : MGun {
 			minRange = 0;
@@ -1174,7 +1220,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1192,13 +1238,13 @@ class CfgWeapons {
 			burst = 5;
 			burstRangeMax = 10;
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 1;
 			minRange = 50;
 			minRangeProbab = 0.1;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 300;
+			midRange = 300;
+			midRangeProbab = 0.8;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1206,13 +1252,13 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 10;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 600;
+			aiRateOfFireDistance = 700;
 			aiRateOfFireDispersion = 1;
 			minRange = 300;
 			minRangeProbab = 0.4;
-			midRange = 450;
-			midRangeProbab = 0.7;
-			maxRange = 600;
+			midRange = 550;
+			midRangeProbab = 0.8;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1224,16 +1270,16 @@ class CfgWeapons {
 			aiRateOfFireDispersion = 1.5;
 			minRange = 600;
 			minRangeProbab = 0.4;
-			midRange = 850;
-			midRangeProbab = 0.7;
-			maxRange = 1100;
-			maxRangeProbab = 0.4;
+			midRange = 1100;
+			midRangeProbab = 0.8;
+			maxRange = 1500;
+			maxRangeProbab = 0.6;
 		};
 	};
 	
 	class RHS_weap_Ags30 : GMG_20mm {
-		aiDispersionCoefY = 12;
-		aiDispersionCoefX = 12;
+		aiDispersionCoefY = 11;
+		aiDispersionCoefX = 11;
 		
 		class manual : GMG_F {
 			minRange = 0;
@@ -1245,7 +1291,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 3;
 			burstRangeMax = 6;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1303,8 +1349,8 @@ class CfgWeapons {
 	};
 	
 	class rhs_weap_pkm_tigr : rhs_weap_pkt {
-		aiDispersionCoefY = 9;
-		aiDispersionCoefX = 9;
+		aiDispersionCoefY = 8;
+		aiDispersionCoefX = 8;
 		
 		class manual : MGun {
 			minRange = 0;
@@ -1316,7 +1362,7 @@ class CfgWeapons {
 		};
 		
 		class close : manual {
-			showToPlayer = false;
+			showToPlayer = "false";
 			burst = 6;
 			burstRangeMax = 12;
 			aiRateOfFire = 1;	// delay between shots at given distance
@@ -1334,13 +1380,13 @@ class CfgWeapons {
 			burst = 5;
 			burstRangeMax = 10;
 			aiRateOfFire = 1;	// delay between shots at given distance
-			aiRateOfFireDistance = 300;
+			aiRateOfFireDistance = 400;
 			aiRateOfFireDispersion = 1;
 			minRange = 50;
 			minRangeProbab = 0.1;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 300;
+			midRange = 300;
+			midRangeProbab = 0.8;
+			maxRange = 400;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1348,13 +1394,13 @@ class CfgWeapons {
 			burst = 4;
 			burstRangeMax = 10;
 			aiRateOfFire = 1.5;	// delay between shots at given distance
-			aiRateOfFireDistance = 600;
+			aiRateOfFireDistance = 700;
 			aiRateOfFireDispersion = 1;
 			minRange = 300;
 			minRangeProbab = 0.4;
-			midRange = 450;
-			midRangeProbab = 0.7;
-			maxRange = 600;
+			midRange = 550;
+			midRangeProbab = 0.8;
+			maxRange = 700;
 			maxRangeProbab = 0.6;
 		};
 		
@@ -1366,10 +1412,10 @@ class CfgWeapons {
 			aiRateOfFireDispersion = 1.5;
 			minRange = 600;
 			minRangeProbab = 0.4;
-			midRange = 850;
-			midRangeProbab = 0.7;
-			maxRange = 1100;
-			maxRangeProbab = 0.4;
+			midRange = 1100;
+			midRangeProbab = 0.8;
+			maxRange = 1500;
+			maxRangeProbab = 0.6;
 		};
 	};
 };
