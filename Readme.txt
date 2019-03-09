@@ -1,13 +1,10 @@
-v1.12
+v1.13
 
 cf_weap_main:
 - N/A
 
 cf_weap_flares
 - Massively increases the brightness and intensity of the vanilla flares.
-
-cf_weap_nia_ak:
-- Set zoom distances on all weapons to vanilla values.
 
 cf_weap_nia_m14
 - Added compatibility for RHS scopes to the M14 DMR (RIS).
