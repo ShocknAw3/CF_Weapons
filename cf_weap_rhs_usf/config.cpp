@@ -581,7 +581,7 @@ class CfgWeapons {
 			maxRangeProbab = 0.4;
 		};
 		
-		class medium : FullAuto {
+		class medium : short {
 			showToPlayer = false;
 			aiRateOfFire = 1;	// delay between shots at given distance
 			aiRateOfFireDistance = 600;
