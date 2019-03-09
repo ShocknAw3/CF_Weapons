@@ -551,7 +551,7 @@ class CfgWeapons {
 		
 		class manual : Mode_FullAuto {};
 		
-		class close : manual {
+		class close : FullAuto {
 			showToPlayer = false;
 			aiRateOfFire = 0.5;	// delay between shots at given distance
 			aiRateOfFireDistance = 50;
